@@ -24,8 +24,6 @@
 body {
   color: theme(colors[text-primary]);
   background-color: theme(colors[page-bg]);
-  min-height: 100vh;
-  height: 100%;
 }
 
 svg {

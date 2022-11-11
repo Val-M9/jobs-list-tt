@@ -1,8 +1,10 @@
 import { FC } from 'react';
+import { NavLink } from 'react-router-dom';
 import { JobInfo } from '../../common/types';
 import { Bookmark, Marker, Star } from '../../common/svg';
 import { getDaysAmount } from '../../helpers';
 import './styles.css';
+import { RoutePath } from '../../common/enums';
 
 type CardProps = {
   job: JobInfo;
@@ -12,7 +14,7 @@ const Card: FC<CardProps> = ({ job }) => {
   const posted = getDaysAmount(job.createdAt);
 
   return (
-    <div className="card">
+    <NavLink className="card" to={`${RoutePath.DETAILS}${job.id}`}>
       <div className="photo-wrapper">
         <img className="photo" src={job.pictures[0]} alt="" />
       </div>
@@ -39,7 +41,7 @@ const Card: FC<CardProps> = ({ job }) => {
           </div>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 
