@@ -2,7 +2,7 @@
 
 @layer components {
   .card {
-    @apply flex flex-row relative rounded-lg w-full mt-1 mb-1 cursor-pointer;
+    @apply flex flex-row relative rounded-lg w-full mt-1 mb-1;
     background-color: theme(colors[card-mobile-bg]);
     max-width: theme(maxWidth[card-mobile]);
     height: theme(height[card-mobile]);
@@ -28,7 +28,7 @@
   }
 
   .title {
-    @apply text-[18px] leading-[24px] tracking-[-.56px] pb-1;
+    @apply text-[18px] leading-[24px] tracking-[-.56px] pb-1 cursor-pointer;
   }
 
   .department-location {

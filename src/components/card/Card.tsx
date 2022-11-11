@@ -14,7 +14,7 @@ const Card: FC<CardProps> = ({ job }) => {
   const posted = getDaysAmount(job.createdAt);
 
   return (
-    <NavLink className="card" to={`${RoutePath.DETAILS}${job.id}`}>
+    <div className="card">
       <div className="photo-wrapper">
         <img className="photo" src={job.pictures[0]} alt="" />
       </div>
@@ -31,7 +31,9 @@ const Card: FC<CardProps> = ({ job }) => {
           <Bookmark className="bookmark" />
         </div>
         <div className="info-general">
-          <h2 className="title">{job.name}</h2>
+          <NavLink className="title" to={`${RoutePath.DETAILS}/${job.id}`}>
+            {job.name}
+          </NavLink>
           <div className="department-location">
             <p className="department">Department name • {job.title}</p>
             <p className="location">
@@ -41,7 +43,7 @@ const Card: FC<CardProps> = ({ job }) => {
           </div>
         </div>
       </div>
-    </NavLink>
+    </div>
   );
 };
 

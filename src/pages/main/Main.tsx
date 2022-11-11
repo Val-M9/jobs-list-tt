@@ -20,11 +20,11 @@ const Main = () => {
   }
 
   return (
-    <div className="wrapper">
-      {jobs?.map((job) => (
+    <main className="wrapper">
+      {jobs.map((job) => (
         <Card key={job.id} job={job} />
       ))}
-    </div>
+    </main>
   );
 };
 

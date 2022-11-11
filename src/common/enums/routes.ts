@@ -1,4 +1,5 @@
 export enum RoutePath {
   MAIN = '/',
-  DETAILS = '/details/:id',
+  DETAILS = '/details',
+  DETAILS_PAGE = '/details/:id',
 }
