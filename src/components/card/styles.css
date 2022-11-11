@@ -33,7 +33,7 @@
 
   .department-location {
     @apply text-[16px] leading-[25px] tracking-[.24px];
-    color: theme(colors[text-secondary]);
+    color: theme(colors[secondary]);
   }
 
   .department {
@@ -48,7 +48,7 @@
 
   .info-additional {
     @apply flex justify-between items-center text-[14px] font-light leading-[17px] tracking-[.21px];
-    color: theme(colors[text-secondary]);
+    color: theme(colors[secondary]);
   }
 
   .bookmark {

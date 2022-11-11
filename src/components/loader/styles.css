@@ -11,8 +11,8 @@
 
   .lds-ring div {
     @apply box-border block absolute w-16 h-16 m-2 rounded-full;
-    border: 8px solid theme(colors[text-primary]);
-    border-color: theme(colors[text-primary]) transparent transparent transparent;
+    border: 8px solid theme(colors[primary]);
+    border-color: theme(colors[primary]) transparent transparent transparent;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   }
 

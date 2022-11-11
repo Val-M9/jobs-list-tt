@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .details-wrapper {
+    @apply mt-6 mr-4 mb-8 ml-4;
+  }
+
+  @media (min-width: 640px) {
+    .details-wrapper {
+      @apply flex justify-center max-w-[1258px] w-full;
+    }
+  }
+}

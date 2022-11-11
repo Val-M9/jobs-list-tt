@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { apiCall } from '../../api/api-call';
 import { JobInfo } from '../../common/types';
 import { filterById } from '../../helpers';
+import { Header } from '../../components';
+import './styles.css';
 
 const Details = () => {
   const [info, setInfo] = useState<JobInfo | undefined>();
@@ -21,7 +23,11 @@ const Details = () => {
 
   console.log('info', info);
 
-  return <div>Details</div>;
+  return (
+    <main className="details-wrapper">
+      <Header />
+    </main>
+  );
 };
 
 export { Details };

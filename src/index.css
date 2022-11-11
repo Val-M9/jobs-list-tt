@@ -22,7 +22,7 @@
 }
 
 body {
-  color: theme(colors[text-primary]);
+  color: theme(colors[primary]);
   background-color: theme(colors[page-bg]);
 }
 

@@ -1,0 +1,36 @@
+@tailwind components;
+
+@layer components {
+  .header {
+    @apply flex flex-col;
+  }
+
+  .heading {
+    @apply text-[28px] leading-[34px] tracking-[.41px] font-bold border-b;
+    border-color: theme(colors[primary])
+  }
+
+  .icons {
+    @apply flex flex-row self-center;
+  }
+
+  .star-icon {
+    @apply w-5 h-5;
+  }
+
+  .star-icon path {
+    @apply fill-none;
+    stroke: theme(colors[primary]);
+    stroke-width: 1px;
+  }
+
+  .bookmark-icon {
+    @apply hidden;
+  }
+
+  @media (min-width: 640px) {
+    .header {
+      @apply flex flex-row;
+    }
+  }
+}

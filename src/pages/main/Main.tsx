@@ -20,7 +20,7 @@ const Main = () => {
   }
 
   return (
-    <main className="wrapper">
+    <main className="main-wrapper">
       {jobs.map((job) => (
         <Card key={job.id} job={job} />
       ))}

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { JobInfo } from '../../common/types';
-import { Bookmark, Marker, Star } from '../svg';
+import { Bookmark, Mark, Star } from '../svg';
 import { getDaysAmount } from '../../helpers';
 import './styles.css';
 import { RoutePath } from '../../common/enums';
@@ -37,7 +37,7 @@ const Card: FC<CardProps> = ({ job }) => {
           <div className="department-location">
             <p className="department">Department name • {job.title}</p>
             <p className="location">
-              <Marker />
+              <Mark />
               <span>{job.address}</span>
             </p>
           </div>

@@ -19,11 +19,11 @@ module.exports = {
         'page-bg': '#E6E9F2',
         'card-mobile-bg': '#EFF0F5',
         'card-desktop-bg': '#FFFFFF',
-        'text-primary': '#3A4562',
-        'text-secondary': '#878D9D'
+        'primary': '#3A4562',
+        'secondary': '#878D9D'
       },
       maxWidth: {
-        'card-mobile': '396px',
+        'card-mobile': '620px',
         'card-desktop': '1440px',
       },
       width: {
