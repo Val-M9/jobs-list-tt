@@ -2,35 +2,42 @@
 
 @layer components {
   .header {
-    @apply flex flex-col;
+    @apply flex flex-col sm:flex-row sm:border-b sm:max-w-[723px] sm:w-full sm:justify-between;
   }
 
   .heading {
-    @apply text-[28px] leading-[34px] tracking-[.41px] font-bold border-b;
-    border-color: theme(colors[primary])
+    @apply text-[28px] leading-[34px] tracking-[.41px] font-bold pb-3 border-b
+    sm:border-b-0 sm:pb-0;
   }
 
   .icons {
-    @apply flex flex-row self-center;
+    @apply flex flex-row pt-6 cursor-pointer sm:items-center sm:pt-0;
+  }
+
+  .icons span {
+    @apply text-base leading-6 sm:text-lg;
+    color: theme(colors[secondary]);
+  } 
+
+  .icons span:first-of-type {
+    @apply mr-9 sm:mr-8;
+  }
+
+  .icon {
+    @apply mr-3;
   }
 
   .star-icon {
-    @apply w-5 h-5;
+    @apply w-5 h-5 sm:hidden;
   }
 
   .star-icon path {
     @apply fill-none;
-    stroke: theme(colors[primary]);
+    stroke: theme(colors[secondary]);
     stroke-width: 1px;
   }
 
   .bookmark-icon {
-    @apply hidden;
-  }
-
-  @media (min-width: 640px) {
-    .header {
-      @apply flex flex-row;
-    }
+    @apply hidden sm:block;
   }
 }

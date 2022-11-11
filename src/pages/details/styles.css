@@ -7,7 +7,7 @@
 
   @media (min-width: 640px) {
     .details-wrapper {
-      @apply flex justify-center max-w-[1258px] w-full;
+      @apply flex justify-center mt-14 max-w-[1258px] w-full;
     }
   }
 }

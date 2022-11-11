@@ -17,10 +17,10 @@ module.exports = {
       },
       colors: {
         'page-bg': '#E6E9F2',
-        'card-mobile-bg': '#EFF0F5',
-        'card-desktop-bg': '#FFFFFF',
+        'light-blue': '#EFF0F5',
         'primary': '#3A4562',
-        'secondary': '#878D9D'
+        'secondary': 'hsla(225, 25%, 29%, 0.82)',
+        'light-gray': '#878D9D'
       },
       maxWidth: {
         'card-mobile': '620px',

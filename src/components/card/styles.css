@@ -3,7 +3,7 @@
 @layer components {
   .card {
     @apply flex flex-row relative rounded-lg w-full mt-1 mb-1;
-    background-color: theme(colors[card-mobile-bg]);
+    background-color: theme(colors[light-blue]);
     max-width: theme(maxWidth[card-mobile]);
     height: theme(height[card-mobile]);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
@@ -33,7 +33,7 @@
 
   .department-location {
     @apply text-[16px] leading-[25px] tracking-[.24px];
-    color: theme(colors[secondary]);
+    color: theme(colors[light-gray]);
   }
 
   .department {
@@ -48,7 +48,7 @@
 
   .info-additional {
     @apply flex justify-between items-center text-[14px] font-light leading-[17px] tracking-[.21px];
-    color: theme(colors[secondary]);
+    color: theme(colors[light-gray]);
   }
 
   .bookmark {
@@ -57,7 +57,7 @@
 
   @media (min-width: 640px) {
     .card {
-      background-color: theme(colors[card-desktop-bg]);
+      background-color: theme(colors[white]);
       height: theme(height[card-desktop]);
       max-width: theme(maxWidth[card-desktop]);
       box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);

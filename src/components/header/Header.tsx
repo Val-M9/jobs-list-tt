@@ -7,14 +7,11 @@ const Header: FC = () => {
     <header className="header">
       <h1 className="heading">Job Details</h1>
       <div className="icons">
-        <Star className="star-icon" />
-        <Bookmark className="bookmark-icon" />
+        <Star className="icon star-icon" />
+        <Bookmark className="icon bookmark-icon" />
         <span>Save to my list</span>
-
-        <div>
-          <Share />
-          <span>Share</span>
-        </div>
+        <Share className="icon" />
+        <span>Share</span>
       </div>
     </header>
   );
