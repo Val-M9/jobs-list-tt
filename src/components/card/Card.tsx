@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { JobInfo } from '../../common/types';
-import { Bookmark, Marker, Star } from '../../common/svg';
+import { Bookmark, Marker, Star } from '../svg';
 import { getDaysAmount } from '../../helpers';
 import './styles.css';
 import { RoutePath } from '../../common/enums';
