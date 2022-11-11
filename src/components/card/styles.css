@@ -52,7 +52,7 @@
   }
 
   .bookmark {
-    @apply hidden
+    @apply hidden;
   }
 
   @media (min-width: 640px) {
@@ -98,7 +98,7 @@
     }
 
     .info-additional {
-      @apply flex justify-between w-[268px];
+      @apply flex justify-between min-w-fit;
     }
 
     .info-additional > p {
@@ -106,7 +106,7 @@
     }
 
     .rating-block {
-      @apply mr-6 text-start;
+      @apply mr-4 text-start;
     }
 
     .rating {
