@@ -1,0 +1,120 @@
+@tailwind components;
+
+@layer components {
+  .card {
+    @apply flex flex-row relative rounded-lg w-full mt-1 mb-1;
+    background-color: theme(colors[card-mobile-bg]);
+    max-width: theme(maxWidth[card-mobile]);
+    height: theme(height[card-mobile]);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .photo-wrapper {
+    @apply flex pt-11 pr-5 pl-4 w-32;
+  }
+
+  .photo {
+    @apply rounded-full;
+    width: theme(width[photo-mobile]);
+    height: theme(height[photo-mobile]);
+  }
+
+  .info {
+    @apply flex flex-col pt-3 pr-4 pb-7 w-full h-full;   
+  }
+
+  .info-general {
+    @apply font-normal text-left text-lg pt-4;
+  }
+
+  .title {
+    @apply text-[18px] leading-[24px] tracking-[-.56px] pb-1;
+  }
+
+  .department-location {
+    @apply text-[16px] leading-[25px] tracking-[.24px];
+    color: theme(colors[text-secondary]);
+  }
+
+  .department {
+    @apply pb-2 line-clamp-2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .location > span {
+    @apply pl-2 align-text-top;
+  }
+
+  .info-additional {
+    @apply flex justify-between items-center text-[14px] font-light leading-[17px] tracking-[.21px];
+    color: theme(colors[text-secondary]);
+  }
+
+  .bookmark {
+    @apply hidden
+  }
+
+  @media (min-width: 640px) {
+    .card {
+      background-color: theme(colors[card-desktop-bg]);
+      height: theme(height[card-desktop]);
+      max-width: theme(maxWidth[card-desktop]);
+      box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    .photo-wrapper {
+      @apply pt-6 pr-6 pl-4 w-36;
+    }
+
+    .photo {
+      width: theme(width[photo-desktop]);
+      height: theme(height[photo-desktop]);
+    }
+
+    .info {
+      @apply flex flex-row-reverse justify-between pt-6 pr-4 pb-6;
+      
+    }
+
+    .info-general {
+      @apply mr-5 pt-0 w-full max-w-lg;
+    }
+
+    .title {
+      @apply pb-1 text-[20px] font-bold leading-[25px] tracking-[-.63px];
+    }
+
+    .department-location {
+      @apply text-[16px] font-normal leading-[25px] tracking-[.24px];
+    }
+
+    .department {
+      @apply pb-1;
+    }
+
+    .location {
+      @apply self-end;
+    }
+
+    .info-additional {
+      @apply flex justify-between w-[268px];
+    }
+
+    .info-additional > p {
+      @apply self-end text-end w-36;
+    }
+
+    .rating-block {
+      @apply mr-6 text-start;
+    }
+
+    .rating {
+      @apply w-5 h-5;
+    }
+
+    .bookmark {
+      @apply block absolute top-7 right-6;
+    }
+  }
+};

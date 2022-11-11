@@ -1,5 +1,7 @@
-function App() {
-  return <div className="text-3xl font-bold underline">working</div>;
-}
+import { Main } from './pages';
+
+const App = () => {
+  return <Main />;
+};
 
 export default App;
