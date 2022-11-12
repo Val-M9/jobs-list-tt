@@ -2,7 +2,7 @@
 
 @layer components {
   .header {
-    @apply flex flex-col sm:flex-row sm:border-b sm:pb-2 sm:max-w-[723px] sm:w-full sm:justify-between;
+    @apply flex flex-col sm:flex-row sm:border-b sm:pb-2 sm:w-full sm:justify-between;
   }
 
   .heading {
