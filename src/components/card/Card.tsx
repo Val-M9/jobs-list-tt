@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { JobInfo } from '../../common/types';
 import { Bookmark, Mark, Star } from '../svg';
 import { getDaysAmount } from '../../helpers';
-import './styles.css';
 import { RoutePath } from '../../common/enums';
+import './styles.css';
 
 type CardProps = {
   job: JobInfo;
