@@ -16,6 +16,13 @@ export type JobInfo = {
   pictures: string[];
   createdAt: string;
   updatedAt: string;
+  description: string;
 };
 
 export type JobsDto = JobInfo[];
+
+export type GeneralDescription = {
+  description: string;
+  responsibilities: string;
+  benefits: string[];
+};
