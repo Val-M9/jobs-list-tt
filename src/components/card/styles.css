@@ -2,11 +2,8 @@
 
 @layer components {
   .card {
-    @apply flex flex-row relative rounded-lg w-full mt-1 mb-1;
-    background-color: theme(colors[light-blue]);
-    max-width: theme(maxWidth[card-mobile]);
-    height: theme(height[card-mobile]);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+    @apply flex flex-row relative rounded-lg w-full max-w-card-mobile h-card-mobile mt-1 mb-1 bg-light-blue
+    shadow-card-mobile sm:bg-white sm:h-card-desktop sm:max-w-card-desktop sm:shadow-card-desktop;
   }
 
   .photo-wrapper {
@@ -14,9 +11,7 @@
   }
 
   .photo {
-    @apply rounded-full;
-    width: theme(width[photo-mobile]);
-    height: theme(height[photo-mobile]);
+    @apply w-photo-mobile h-photo-mobile rounded-full sm:w-photo-desktop sm:h-photo-desktop;
   }
 
   .info {
@@ -34,14 +29,11 @@
   }
 
   .department-location {
-    @apply text-[16px] leading-[25px] tracking-[.24px] font-normal;
-    color: theme(colors[light-gray]);
+    @apply text-[16px] leading-[25px] tracking-[.24px] font-normal text-light-gray;
   }
 
   .department {
-    @apply pb-2 line-clamp-2 sm:pb-1;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    @apply pb-2 line-clamp-2 text-ellipsis overflow-hidden sm:pb-1;
   }
    
   .location {
@@ -52,13 +44,12 @@
     @apply pl-2 align-text-top;
   }
 
-  .info-additional {
+  .info-secondary {
     @apply flex justify-between items-center text-[14px] font-light leading-[17px] tracking-[.21px]
-    sm:justify-between sm:min-w-fit;
-    color: theme(colors[light-gray]);
+    text-light-gray sm:justify-between sm:min-w-fit;
   }
 
-  .info-additional > p {
+  .info-secondary > p {
     @apply sm:self-end sm:text-end sm:w-36;
   }
 
@@ -71,28 +62,10 @@
   }
 
   .rating path {
-    fill: theme(colors[secondary])
+    @apply fill-secondary sm:fill-primary;
   }
 
   .bookmark {
     @apply hidden sm:block sm:absolute sm:top-7 sm:right-6;
-  }
-
-  @media (min-width: 640px) {
-    .card {
-      background-color: theme(colors[white]);
-      height: theme(height[card-desktop]);
-      max-width: theme(maxWidth[card-desktop]);
-      box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
-    }
-
-    .photo {
-      width: theme(width[photo-desktop]);
-      height: theme(height[photo-desktop]);
-    }
-
-    .rating path {
-      fill: theme(colors[primary])
-    }
   }
 };

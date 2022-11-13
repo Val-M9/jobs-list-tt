@@ -15,8 +15,7 @@
   }
 
   .icons span {
-    @apply text-base leading-6 sm:text-lg;
-    color: theme(colors[secondary]);
+    @apply text-base leading-6 text-secondary sm:text-lg;
   } 
 
   .icons span:first-of-type {
@@ -32,9 +31,7 @@
   }
 
   .star-icon path {
-    @apply fill-none;
-    stroke: theme(colors[secondary]);
-    stroke-width: 1px;
+    @apply fill-none stroke-secondary stroke-1;
   }
 
   .bookmark-icon {

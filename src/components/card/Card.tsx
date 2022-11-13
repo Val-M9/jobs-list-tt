@@ -19,7 +19,7 @@ const Card: FC<CardProps> = ({ job }) => {
         <img className="photo" src={job.pictures[0]} alt="" />
       </div>
       <div className="info">
-        <div className="info-additional">
+        <div className="info-secondary">
           <div className="rating-block">
             <Star className="rating" />
             <Star className="rating" />
