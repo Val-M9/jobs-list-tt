@@ -6,7 +6,6 @@ import './styles.css';
 
 const Main = () => {
   const [jobs, setJobs] = useState<JobsDto | undefined>();
-  console.log(jobs);
 
   useEffect(() => {
     (async () => {
