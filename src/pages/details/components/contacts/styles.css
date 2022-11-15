@@ -2,11 +2,15 @@
 
 @layer components {
   .contacts-wrapper {
-    @apply mt-16;
+    @apply mt-16 sm:mt-0;
+  }
+
+  .contacts-wrapper h1:first-of-type {
+    @apply sm:hidden;
   }
 
   .contacts-container {
-    @apply max-w-full w-screen h-[436px] mt-5;
+    @apply max-w-full w-screen h-[436px] mt-5 sm:mt-0;
   }
 
   .contacts {

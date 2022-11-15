@@ -1,11 +1,6 @@
 import React, { ReactElement } from 'react';
+import { MapProps } from './types';
 import './styles.css';
-
-interface MapProps extends google.maps.MapOptions {
-  children: ReactElement<any, any>;
-  center: google.maps.LatLngLiteral;
-  mapStyles: google.maps.MapTypeStyle[];
-}
 
 const Map: React.FC<MapProps> = ({ children, center, mapStyles }) => {
   const [map, setMap] = React.useState<google.maps.Map>();

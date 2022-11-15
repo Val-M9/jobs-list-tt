@@ -1,14 +1,10 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import { JobInfo } from '../../common/types';
 import { Bookmark, Mark, Star } from '../svg';
 import { getDaysAmount } from '../../helpers';
 import { RoutePath } from '../../common/enums';
+import { CardProps } from './types';
 import './styles.css';
-
-type CardProps = {
-  job: JobInfo;
-};
 
 const Card: FC<CardProps> = ({ job }) => {
   const posted = getDaysAmount(job.createdAt);

@@ -2,7 +2,6 @@
 
 @layer components {
   .main-wrapper {
-    @apply flex flex-col items-center p-2 sm:p-6;
-    background-color: theme(colors[page-bg]);
+    @apply flex flex-col items-center p-2 sm:p-6 bg-page-bg;
   }
 }

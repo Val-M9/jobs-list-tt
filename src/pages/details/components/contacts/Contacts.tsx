@@ -3,15 +3,8 @@ import { Wrapper, Status } from '@googlemaps/react-wrapper';
 import { GOOGLE_MAPS_API_KEY } from '../../../../common/constants';
 import { Loader, Mark } from '../../../../components';
 import { MapWithMarker } from '../map/MapWithMarker';
+import { ContactsProps } from './types';
 import './styles.css';
-
-type ContactsProps = {
-  center: google.maps.LatLngLiteral;
-  name: string;
-  address: string;
-  phone: string;
-  email: string;
-};
 
 const Contacts: FC<ContactsProps> = ({ center, name, address, phone, email }) => {
   const renderMap = (status: Status) => {
