@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Bookmark, Share, Star } from '../../../../components/svg';
+import { Bookmark, Share, Star } from '../../../../components';
 import './styles.css';
 
 const Header: FC = () => {

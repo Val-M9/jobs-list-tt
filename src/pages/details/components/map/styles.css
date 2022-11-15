@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .map {
+    @apply w-full h-3/6 border-0 rounded-b-lg;
+  }
+}

@@ -2,6 +2,34 @@
 
 @layer components {
   .contacts-wrapper {
-    @apply w-full h-[436px];
+    @apply mt-16;
+  }
+
+  .contacts-container {
+    @apply max-w-full w-screen h-[436px] mt-5;
+  }
+
+  .contacts {
+    @apply flex flex-col justify-center w-full h-3/6 pl-16 pr-16 bg-blue-900 border-0 rounded-t-lg;
+  }
+
+  .contacts-name {
+    @apply text-[16px] leading-5 tracking-[.24px] font-bold text-gray-200;
+  }
+
+  .contacts-info {
+    @apply pt-4 text-[16px] leading-6 tracking-[-.5px] text-gray-200;
+  }
+
+  .contacts-info p:not(:first-of-type) {
+    @apply text-cloudy-white;
+  }
+
+  .contacts-info p:nth-of-type(2) {
+    @apply pt-2;
+  }
+
+  .mark {
+    @apply mr-2 align-top
   }
 }

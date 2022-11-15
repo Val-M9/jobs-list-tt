@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import '../contacts/styles.css';
+import './styles.css';
 
 interface MapProps extends google.maps.MapOptions {
   children: ReactElement<any, any>;
@@ -26,7 +26,7 @@ const Map: React.FC<MapProps> = ({ children, center, mapStyles }) => {
 
   return (
     <>
-      <div ref={ref} className="contacts-wrapper" />
+      <div ref={ref} className="map" />
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           // @ts-ignore

@@ -2,12 +2,76 @@
 
 @layer components {
   .details-wrapper {
-    @apply mt-6 mr-4 mb-8 ml-4;
+    @apply flex mt-6 mr-4 mb-8 ml-4 justify-center
   }
 
-  @media (min-width: 640px) {
-    .details-wrapper {
-      @apply flex justify-center mt-14 max-w-[1258px] w-full;
-    }
+  .details-content {
+    @apply flex flex-col w-full
+    sm:grid sm:grid-cols-[minmax(400px,_1fr)_min-content] sm:gap-6 sm:w-full sm:max-w-[1228px];
+  }
+
+  .top-block {
+    @apply flex flex-wrap;
+  }
+
+  .details-title {
+    @apply pt-8 text-2xl leading-[30px] font-bold w-full;
+  }
+
+  .top-info {
+    @apply flex flex-row justify-between items-center w-full pt-1;
+  }
+
+  .top-info p {
+    @apply text-[13px] leading-6 font-light text-light-gray;
+  }
+
+  .salary {
+    @apply flex flex-col items-end;
+  }
+
+  .salary span {
+    @apply text-[18px] leading-6 font-normal text-secondary;
+  }
+
+  .salary h2 {
+    @apply text-[20px] leading-6 font-bold;
+  }
+
+  .description {
+    @apply pt-4 text-[18px] leading-[24px] tracking-[-.56px] font-normal text-secondary;
+  }
+
+  .description h2 {
+    @apply text-[20px] leading-[25px] tracking-[-.63px] font-bold text-primary;
+  }
+
+  .description ul {
+    @apply list-inside;
+    list-style-type: square;
+  }
+
+  .responsibilities {
+    @apply pt-11 pb-1;
+  }
+
+  .benefits {
+    @apply pt-6 pb-8;
+  }
+
+  .apply-btn {
+    @apply self-center mt-5 w-32 h-[52px] rounded-lg bg-blue-700 text-white uppercase font-semibold text-xs leading-4;
+  }
+
+  .additional-info {
+    @apply mt-16;
+  }
+
+  .employment-btn {
+    @apply h-[50px] w-[122px] mt-3 mr-2 rounded-lg border-gray-10 border bg-blue-100 text-blue-200 font-bold text-[16px] leading-4 tracking-[.46px];
+  }
+
+  .benefits-btn {
+    @apply h-[50px] w-[122px] min-w-fit pl-3 pr-3 mt-3 mr-2 rounded-lg border-yellow-100 border bg-yellow-50 text-yellow-150 font-bold text-[16px] leading-4 tracking-[.46px];
   }
 }

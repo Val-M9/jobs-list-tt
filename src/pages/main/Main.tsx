@@ -9,8 +9,10 @@ const Main = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await apiCall.getAllJobs();
+      const response = await apiCall.fetchMockData();
       setJobs(response);
+      //const response = await apiCall.getAllJobs();
+      //setJobs(response);
     })();
   }, []);
 
