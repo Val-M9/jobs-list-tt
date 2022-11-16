@@ -1,20 +1,21 @@
-import { useEffect, useState } from 'react';
-import { apiCall } from '../../api/api-call';
-import { JobsDto } from '../../common/types';
+import { useEffect } from 'react';
+// import { apiCall } from '../../api/api-call';
+// import { JobsDto } from '../../common/types';
 import { Card, Loader } from '../../components';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { fetchJobs } from '../../store/actions';
+import { selectAllJobs } from '../../store/selectors';
 import './styles.css';
 
 const Main = () => {
-  const [jobs, setJobs] = useState<JobsDto | undefined>();
+  const dispatch = useAppDispatch();
+  const jobs = useAppSelector(selectAllJobs);
 
   useEffect(() => {
     (async () => {
-      const response = await apiCall.fetchMockData();
-      setJobs(response);
-      //const response = await apiCall.getAllJobs();
-      //setJobs(response);
+      dispatch(fetchJobs());
     })();
-  }, []);
+  }, [dispatch]);
 
   if (!jobs) {
     return <Loader />;
