@@ -2,31 +2,33 @@
 
 @layer components {
   .contacts-wrapper {
-    @apply mt-16 sm:mt-0;
+    @apply mt-16 md:mt-0;
   }
 
   .contacts-wrapper h1:first-of-type {
-    @apply sm:hidden;
+    @apply md:hidden;
   }
 
   .contacts-container {
-    @apply max-w-full w-screen h-[436px] mt-5 sm:mt-0;
+    @apply max-w-full w-screen h-[436px] mt-5 md:mt-0;
   }
 
   .contacts {
-    @apply flex flex-col justify-center w-full h-3/6 pl-16 pr-16 bg-blue-900 border-0 rounded-t-lg;
+    @apply flex flex-col justify-center w-full h-3/6 pl-16 pr-16 bg-blue-900 border-0 rounded-t-lg 
+    text-gray-200 sm:bg-[url('../../../../assets/images/circle-shape.png')] bg-no-repeat;
   }
 
   .contacts-name {
-    @apply text-[16px] leading-5 tracking-[.24px] font-bold text-gray-200;
+    @apply text-[16px] leading-5 tracking-[.24px] font-bold sm:text-[20px]
+    sm:leading-5 sm:tracking-[-.63px];
   }
 
   .contacts-info {
-    @apply pt-4 text-[16px] leading-6 tracking-[-.5px] text-gray-200;
+    @apply pt-4 text-[16px] leading-6 tracking-[-.5px] sm:text-[18px] sm:pt-2;
   }
 
   .contacts-info p:not(:first-of-type) {
-    @apply text-cloudy-white;
+    @apply text-cloudy-white sm:text-gray-200;
   }
 
   .contacts-info p:nth-of-type(2) {

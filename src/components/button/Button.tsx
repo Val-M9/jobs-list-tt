@@ -1,9 +1,12 @@
 import { FC } from 'react';
+import { ButtonProps } from './types';
 
-interface ButtonProps extends Omit<React.HTMLProps<HTMLButtonElement>, 'type'> {}
-
-const Button: FC<ButtonProps> = ({ children, className }) => {
-  return <button className={className}>{children}</button>;
+const Button: FC<ButtonProps> = ({ children, className, onClick }) => {
+  return (
+    <button className={className} onClick={onClick}>
+      {children}
+    </button>
+  );
 };
 
 export { Button };

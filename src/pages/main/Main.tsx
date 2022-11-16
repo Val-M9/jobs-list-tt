@@ -1,13 +1,11 @@
-import { useEffect } from 'react';
-// import { apiCall } from '../../api/api-call';
-// import { JobsDto } from '../../common/types';
+import { FC, useEffect } from 'react';
 import { Card, Loader } from '../../components';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { fetchJobs } from '../../store/actions';
 import { selectAllJobs } from '../../store/selectors';
 import './styles.css';
 
-const Main = () => {
+const Main: FC = () => {
   const dispatch = useAppDispatch();
   const jobs = useAppSelector(selectAllJobs);
 

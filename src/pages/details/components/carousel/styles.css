@@ -1,9 +1,11 @@
 @tailwind components;
 
-.image {
-  @apply mt-5 rounded-lg w-52 h-[115px];
-}
+@layer components {
+  .swiper-container {
+    @apply max-w-full min-w-0 max-h-screen mt-[135px] overflow-hidden;
+  }
 
-.swiper-container {
-  @apply max-w-full min-w-0 max-h-screen mt-[135px] overflow-hidden;
+  .image {
+    @apply mt-5 rounded-lg w-full max-w-[209px] h-[115px] object-cover;
+  }
 }

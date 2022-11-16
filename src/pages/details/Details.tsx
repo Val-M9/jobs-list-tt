@@ -1,17 +1,20 @@
 import { FC } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { selectJobById } from '../../store/selectors';
 import { getDaysAmount, formatSalary, formatDescription } from '../../helpers';
 import { useAppSelector } from '../../hooks';
-import { Button, Loader } from '../../components';
+import { ArrowLeft, Button, Loader } from '../../components';
 import { Header, Carousel, Contacts } from './components';
 import './styles.css';
 
-const Details: FC = () => {
-  const { id } = useParams();
-  const jobInfo = useAppSelector((state) => selectJobById(state, id as string));
-  console.log(jobInfo);
+type Params = {
+  id: string;
+};
 
+const Details: FC = () => {
+  const { id } = useParams<Params>();
+  const jobInfo = useAppSelector((state) => selectJobById(state, id as string));
+  const navigate = useNavigate();
   let posted;
   let salary;
   let description;
@@ -21,6 +24,10 @@ const Details: FC = () => {
     salary = formatSalary(jobInfo.salary);
     description = formatDescription(jobInfo.description);
   }
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
 
   if (!jobInfo) {
     return <Loader />;
@@ -58,14 +65,14 @@ const Details: FC = () => {
           <div className="details-additional">
             <Carousel pictures={jobInfo.pictures} />
             <div className="additional-info">
-              <h1 className="heading">Additional Info</h1>
-              <p className="description">Employment type</p>
+              <h1 className="heading bordered">Additional Info</h1>
+              <p className="description pt-4">Employment type</p>
               {jobInfo.employment_type.map((type) => (
                 <Button key={type} className="employment-btn">
                   {type}
                 </Button>
               ))}
-              <p className="description">Benefits</p>
+              <p className="description sm:pt-6">Benefits</p>
               {jobInfo.benefits.map((benefit) => (
                 <Button key={benefit} className="benefits-btn">
                   {benefit}
@@ -73,6 +80,10 @@ const Details: FC = () => {
               ))}
             </div>
           </div>
+          <Button className="return-btn" onClick={() => handleGoBack()}>
+            <ArrowLeft className="mr-3" />
+            Return to job board
+          </Button>
         </section>
         <Contacts
           center={{ lat: +`${jobInfo.location.lat}`, lng: +`${jobInfo.location.long}` }}
