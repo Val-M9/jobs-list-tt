@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { selectAllJobs } from '../../store/selectors';
+import { selectAllJobs, selectIsLoading } from '../../store/selectors';
 import { fetchJobs } from '../../store/actions';
 import { useAppDispatch, useAppSelector } from '../../hooks';
 import { Card, Loader, Paginator } from '../../components';
@@ -8,6 +8,7 @@ import './styles.css';
 const Main: FC = () => {
   const dispatch = useAppDispatch();
   const jobs = useAppSelector(selectAllJobs);
+  const isLoading = useAppSelector(selectIsLoading);
 
   useEffect(() => {
     (async () => {
@@ -15,7 +16,7 @@ const Main: FC = () => {
     })();
   }, [dispatch]);
 
-  if (!jobs) {
+  if (!jobs || isLoading) {
     return <Loader />;
   }
 

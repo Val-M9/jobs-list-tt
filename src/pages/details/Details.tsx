@@ -1,18 +1,14 @@
 import { FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { selectJobById } from '../../store/selectors';
-import { getDaysAmount, formatSalary, formatDescription } from '../../helpers';
+import { getTimeAgo, formatSalary, formatDescription } from '../../helpers';
 import { useAppSelector } from '../../hooks';
 import { ArrowBack, Button, Loader } from '../../components';
 import { Header, Carousel, Contacts } from './components';
 import './styles.css';
 
-type Params = {
-  id: string;
-};
-
 const Details: FC = () => {
-  const { id } = useParams<Params>();
+  const { id } = useParams();
   const jobInfo = useAppSelector((state) => selectJobById(state, id as string));
   const navigate = useNavigate();
   let posted;
@@ -20,7 +16,7 @@ const Details: FC = () => {
   let description;
 
   if (jobInfo) {
-    posted = getDaysAmount(jobInfo.createdAt);
+    posted = getTimeAgo(jobInfo.createdAt);
     salary = formatSalary(jobInfo.salary);
     description = formatDescription(jobInfo.description);
   }
@@ -40,7 +36,7 @@ const Details: FC = () => {
           <Header />
           <Button className="apply-btn btn-top">Apply now</Button>
           <div className="top-block">
-            <h1 className="details-title">{jobInfo.title}</h1>
+            <h1 className="details-title">{jobInfo.name}</h1>
             <div className="top-info">
               <p>Posted {posted}</p>
               <div className="salary">

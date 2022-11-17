@@ -12,9 +12,4 @@ export const apiCall = {
     const result = await instance.get('/');
     return result.data;
   },
-
-  async fetchMockData() {
-    const data = await import('../mock-data/mock-data.json');
-    return data.default;
-  },
 };

@@ -18,6 +18,7 @@ const jobsReducer = createReducer(initialState, (builder) => {
       state.loading = true;
     })
     .addCase(fetchJobs.fulfilled, (state, { payload }) => {
+      state.loading = false;
       state.jobs = payload;
     });
 });

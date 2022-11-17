@@ -19,7 +19,7 @@
   }
 
   .pages {
-    @apply flex flex-row max-w-50 items-center text-page-light-gray font-bold text-[16px] leading-5 tracking-[1.33px]
+    @apply flex flex-row w-min items-center text-page-light-gray font-bold text-[16px] leading-5 tracking-[1.33px]
      overflow-hidden sm:text-page-dark-gray sm:text-[20px] sm:leading-6 sm:tracking-[1.73px];
   }
 
@@ -28,7 +28,8 @@
   }
 
   .page-active {
-    @apply relative text-page-active-blue after:content-[''] after:absolute after:w-6 after:left-0 after:-bottom-2 after:border-b-2
-    after:border-b-page-active-blue sm:after:-bottom-1 sm:after:w-8 sm:after:text-page-active-blue-light sm:after:border-b-page-active-blue-light
+    @apply relative text-page-active-blue after:content-[''] after:absolute after:w-6 after:left-0 after:-bottom-2 
+    after:border-b-2 after:border-b-page-active-blue sm:after:-bottom-1 sm:after:w-8 sm:after:text-page-active-blue-light
+    sm:after:border-b-page-active-blue-light
   }
 }

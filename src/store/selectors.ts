@@ -6,6 +6,10 @@ const selectAllJobs = (state: AppState) => {
   return state.jobs.jobs;
 };
 
+const selectIsLoading = (state: AppState) => {
+  return state.jobs.loading;
+};
+
 const selectJobById = createSelector(
   [selectAllJobs, (state: AppState, jobId: string) => jobId],
   (jobs: JobsDto, jobId: JobInfo['id']) => {
@@ -15,4 +19,4 @@ const selectJobById = createSelector(
   },
 );
 
-export { selectAllJobs, selectJobById };
+export { selectAllJobs, selectIsLoading, selectJobById };

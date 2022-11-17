@@ -1,4 +1,4 @@
 export const formatSalary = (salary: string) => {
-  const term = salary.replaceAll(/k/gi, ' 000');
-  return term.replace(/-/g, '―');
+  const result = salary.replaceAll(/k/gi, ' 000');
+  return result.replace(/-/g, '―');
 };

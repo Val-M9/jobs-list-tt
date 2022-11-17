@@ -20,7 +20,7 @@
   }
 
   .info-general {
-    @apply font-normal text-left text-lg pt-4 sm:mr-5 sm:pt-0 sm:w-auto;
+    @apply font-normal text-left text-lg pt-4 sm:mr-5 sm:pt-0 sm:w-4/6;
   }
 
   .title {
