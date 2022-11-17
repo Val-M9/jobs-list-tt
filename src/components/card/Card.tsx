@@ -1,13 +1,14 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Bookmark, Mark, Star } from '../svg';
-import { getDaysAmount } from '../../helpers';
+import { getTimeAgo, getRandomRating } from '../../helpers';
 import { RoutePath } from '../../common/enums';
 import { CardProps } from './types';
 import './styles.css';
 
 const Card: FC<CardProps> = ({ job }) => {
-  const posted = getDaysAmount(job.createdAt);
+  const posted = getTimeAgo(job.createdAt);
+  const rating = getRandomRating();
 
   return (
     <div className="card">
@@ -17,11 +18,9 @@ const Card: FC<CardProps> = ({ job }) => {
       <div className="info">
         <div className="info-secondary">
           <div className="rating-block">
-            <Star className="rating" />
-            <Star className="rating" />
-            <Star className="rating" />
-            <Star className="rating" />
-            <Star className="rating" />
+            {rating.map((item) => (
+              <Star className="rating" />
+            ))}
           </div>
           <p>Posted {posted}</p>
           <Bookmark className="bookmark" />
