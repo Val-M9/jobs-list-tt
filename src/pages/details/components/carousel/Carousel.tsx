@@ -15,6 +15,10 @@ const Carousel: FC<CarouselProps> = ({ pictures }) => {
           472: { slidesPerView: 2 },
           575: { slidesPerView: 2.5 },
           700: { slidesPerView: 3 },
+          768: { slidesPerView: 1.8 },
+          893: { slidesPerView: 2.3 },
+          1117: { slidesPerView: 2.5 },
+          1243: { slidesPerView: 3.3 },
         }}
       >
         {pictures.map((picture, index) => (
