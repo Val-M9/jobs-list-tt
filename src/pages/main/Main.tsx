@@ -1,8 +1,8 @@
 import { FC, useEffect } from 'react';
-import { Card, Loader } from '../../components';
-import { useAppDispatch, useAppSelector } from '../../hooks';
-import { fetchJobs } from '../../store/actions';
 import { selectAllJobs } from '../../store/selectors';
+import { fetchJobs } from '../../store/actions';
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { Card, Loader, Paginator } from '../../components';
 import './styles.css';
 
 const Main: FC = () => {
@@ -24,6 +24,7 @@ const Main: FC = () => {
       {jobs.map((job) => (
         <Card key={job.id} job={job} />
       ))}
+      <Paginator />
     </main>
   );
 };

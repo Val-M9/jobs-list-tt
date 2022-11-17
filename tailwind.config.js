@@ -14,9 +14,14 @@ module.exports = {
         'primary': '#3A4562',
         'secondary': 'hsla(225, 25%, 29%, 0.82)',
         'marker': '#d8d8d8',
+        'white-249': '#F9FAFD',
         'cloudy-white': 'rgba(255, 255, 255, 0.67)',
         'gray-10': 'rgba(0, 0, 0, 0.12)',
         'gray-200': 'rgba(231, 234, 240, 1)',
+        'page-light-gray' : 'rgba(56, 65, 93, 0.6)',
+        'page-dark-gray': '#70778B',
+        'page-active-blue-light': '#5876C5',
+        'page-active-blue': '#55699E',
         'light-gray': '#878D9D',
         'blue-100': 'rgba(161, 177, 219, 0.3)',
         'blue-200': '#55699E',
@@ -29,6 +34,11 @@ module.exports = {
       maxWidth: {
         'card-mobile': '620px',
         'card-desktop': '1440px',
+        '50': '50%'
+      },
+      minWidth: {
+        '6': '24px',
+        '8': '32px',
       },
       width: {
         'photo-mobile': '66px',

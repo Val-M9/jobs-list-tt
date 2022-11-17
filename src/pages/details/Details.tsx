@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { selectJobById } from '../../store/selectors';
 import { getDaysAmount, formatSalary, formatDescription } from '../../helpers';
 import { useAppSelector } from '../../hooks';
-import { ArrowLeft, Button, Loader } from '../../components';
+import { ArrowBack, Button, Loader } from '../../components';
 import { Header, Carousel, Contacts } from './components';
 import './styles.css';
 
@@ -81,7 +81,7 @@ const Details: FC = () => {
             </div>
           </div>
           <Button className="return-btn" onClick={() => handleGoBack()}>
-            <ArrowLeft className="mr-3" />
+            <ArrowBack className="mr-3" />
             Return to job board
           </Button>
         </section>
