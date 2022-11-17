@@ -1,7 +1,7 @@
 import { AppDispatch } from './app-dispatch';
 import { AppState } from './app-state';
 
-export type ThunkConfig = {
+export type AsyncThunkConfig = {
   state: AppState;
   dispatch: AppDispatch;
 };

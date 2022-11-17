@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Wrapper, Status } from '@googlemaps/react-wrapper';
-import { GOOGLE_MAPS_API_KEY } from '../../../../common/constants';
 import { Loader, Mark } from '../../../../components';
 import { MapWithMarker } from '../map/MapWithMarker';
 import { ContactsProps } from './types';
@@ -37,7 +36,7 @@ const Contacts: FC<ContactsProps> = ({ center, name, address, phone, email }) =>
             <p>{email}</p>
           </div>
         </div>
-        <Wrapper apiKey={GOOGLE_MAPS_API_KEY} render={renderMap} />;
+        <Wrapper apiKey={process.env.REACT_APP_MAPS_API_KEY as string} render={renderMap} />;
       </div>
     </section>
   );

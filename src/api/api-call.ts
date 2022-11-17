@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { TOKEN, BASE_URL } from '../common/constants';
+import { BASE_URL } from '../common/constants';
 import { JobsDto } from '../common/types';
 
 const instance = axios.create({
   baseURL: BASE_URL,
-  headers: { 'Authorization': `Bearer ${TOKEN}` },
+  headers: { 'Authorization': `Bearer ${process.env.REACT_APP_JOBS_API_TOKEN}` },
 });
 
 export const apiCall = {
