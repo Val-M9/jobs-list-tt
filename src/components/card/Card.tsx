@@ -18,8 +18,8 @@ const Card: FC<CardProps> = ({ job }) => {
       <div className="info">
         <div className="info-secondary">
           <div className="rating-block">
-            {rating.map((item) => (
-              <Star className="rating" />
+            {rating.map((_, index) => (
+              <Star key={index} className="rating" />
             ))}
           </div>
           <p>Posted {posted}</p>

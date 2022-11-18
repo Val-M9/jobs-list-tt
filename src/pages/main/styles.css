@@ -2,6 +2,6 @@
 
 @layer components {
   .main-wrapper {
-    @apply flex flex-col items-center p-2 pb-4 sm:p-6 sm:pb-16 bg-page-bg;
+    @apply flex flex-col items-center min-h-screen p-2 pb-4 sm:p-6 sm:pb-16 bg-page-bg;
   }
 }
